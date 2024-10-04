@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*Podemos crear nuestras propias clases haciendo esto con tailwind*/
+@layer components{
+  .Crear{
+    @apply color: white; padding: 20px;
+  }
+}
+:root{
+  background-color: rgb(251, 251, 251);
+  overflow-x: hidden;
+}
+nav{
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+}
+h1{
+  font-family: Tw Cen MT;
+  padding: 1rem;
+}
+h6{
+  padding: 10px;
+}
+.borde-verde {
+  border: 2px solid green;
+}
+.container{
+  position: relative;
+  max-width:25% ;
+  flex-wrap: nowrap;
+}
+.container input,button{
+  padding: 5px;
+}
+select{
+  outline: 1px solid rgb(255, 14, 62);
+  border-radius: 1rem;
+  height: 2rem;
+}
+.container button{
+  background-color: rgb(255, 14, 62);
+  border-radius: 2rem;
+  position: absolute;
+  right: 2.3rem;
+  transition: all .3s;
+
+}
+.cajaCategorias{
+  display: flex;
+  flex-wrap: wrap;
+  width: 30rem;
+  justify-content: space-around;
+}
+.cajaCategorias label{
+  padding: .7rem;
+  color:rgb(255, 14, 62) ;
+}
+.carta{
+  border: 2px solid red;
+  width: 200px;
+  position: relative;
+  margin: 2rem;
+  transition: all .3s;
+}
+
+.equipo{
+  position: absolute;
+  background-color: rgb(255, 14, 62);
+  width: 2rem;
+  padding: 5px;
+  line-height: 1.3rem;
+  text-align: center;
+  right: 0;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+  
+}
+.equipoText{
+  position: absolute;
+  background-color: rgb(255, 14, 62);
+  line-height: 1.6rem;
+  text-align: center;
+  right: -9.3rem;
+  top: -1px;
+  padding: 3px;
+  padding-left: 1rem;
+  color: white;
+  border-radius: .4rem;
+  z-index: 1000;
+  display: none;
+  font-size: 16px;
+  transition: all .3s;
+}
+.equipo:hover .equipoText{
+  display: block;
+}
+.cajaEl{
+  display: flex;
+  align-content: center;
+  width: 100%;
+  justify-content: center;
+}
+.eliminarEquipo{
+  background-color: rgb(255, 14, 62);
+  padding: .5rem;
+  border-radius: 1rem;
+  height: 3rem;
+  width: 4rem;
+}
+.cajaEquipo{
+  position: fixed;
+  width: 80%;
+  top: 20%;
+  background-color: rgb(43, 43, 43);
+  padding: .7rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  transition: all .3s;
+}
+.abierto{
+  transform: translateX(-100%);
+ 
+}
+.desplazar{
+  position: absolute;
+  color: white;
+  right: -20px;
+  background-color: rgb(43, 43, 43);
+  height: 3rem;
+  width: 3rem;
+  top:30%;
+  right: -3rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+}
+.cargando{
+  font-size: 2rem;
+  color: brown;
+}
+.tituloEquipo{
+  color: white;
+  margin: 1rem;
+  width: 100%;
+  font-size: 1.3rem;
+}
+.personajes{
+  display:flex; 
+  padding: 1rem;
+  border: 3px dashed gray;
+  width: 100%;
+}
+.caja{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container button:hover{
+  transform: rotate(-50deg);
+}
+.container input{
+  border-radius: 2rem;
+  outline: 2px solid rgb(255, 14, 62);
+  padding-left:1rem ;
+  padding-right:1rem ;
+  background-color: rgb(244, 241, 241);
+}
